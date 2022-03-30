@@ -1,0 +1,161 @@
+@import "Mixins";
+
+* {
+  padding: 0px;
+  margin: 0px;
+  box-sizing: border-box;
+}
+
+body {
+  width: 100%;
+  height: 100vh;
+  background-color: hsl(217, 54%, 11%);
+  font-size: 18px;
+  font-family: 'Outfit', sans-serif;
+}
+
+.box-container { 
+    width: 100%;
+    height: 100%;
+    @include flex( row , center, center );
+
+}
+
+.box { 
+    width: 400px;
+    height: 570px;
+    background-color: hsl(216, 50%, 16%);
+    border-radius: 6%;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+
+    overflow: auto;
+}
+
+// for main image 
+.main-image { 
+    position: relative;
+    margin-top: 15px;
+    width: 80%;
+
+    .NFTimg { 
+        width: 100%;
+        height: 100%;
+        border-radius: 3%;
+    }
+    
+    .view { 
+        display: none;
+    }
+
+    &:hover { 
+        .view { 
+            display: flex;
+            cursor: pointer;
+            width: 100%;
+            height: 100%;
+            background-color: hsl(178, 100%, 50%, 0.3);
+            border-radius: 3%;
+            position: absolute;
+            top: 0;
+
+            img { 
+                position: absolute;
+                top: 50%;
+                left: 44%;
+            }
+        }
+    }
+}
+
+
+.about-NFT { 
+    margin-top: 15px;
+    width: 80%;
+
+    h3 { 
+        color: hsl(0, 0%, 100%);
+        cursor: pointer;
+
+        &:hover { 
+            color: hsl(178, 100%, 50%);
+        }
+    }
+
+    p {
+        margin-top: 10px;
+        color: hsl(215, 51%, 70%)
+    }
+
+    .price { 
+        width: 100%;
+        height: 50px;
+        @include flex(row, space-between, center);
+
+
+        .ETH {
+           @include flex(row, center, center);
+
+           small { 
+            margin-left: 5px;
+            color: hsl(178, 100%, 50%);
+            font-weight: bold;
+           }
+        }
+
+        .time { 
+            @extend .ETH;
+        }
+    }
+}
+
+
+.profile { 
+    @include flex(column, flex-start, center);
+    width: 100%;
+
+    .line { 
+        margin-top: 10px;
+        width: 80%;
+        height: 2px;
+        background-color: hsl(215, 32%, 27%);
+    }
+
+    .avatar { 
+        margin-top: 10px;
+        display: flex;
+        width: 80%;
+
+        @include flex(row, flex-start, center);
+
+        img { 
+            border: 1px solid white;
+            border-radius: 50%;
+            width: 35px;
+            height: 35px;
+        }
+
+        p { 
+            margin-left: 10px;
+            span { 
+                color: white;
+                cursor: pointer;
+                &:hover { 
+                    color: hsl(178, 100%, 50%);
+                }
+            }
+        }
+    }
+
+}
+
+
+@media (max-width: 375px) { 
+    
+    .box { 
+        width: 350px;
+    }
+}

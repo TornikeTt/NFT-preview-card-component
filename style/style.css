@@ -1,0 +1,143 @@
+* {
+  padding: 0px;
+  margin: 0px;
+  box-sizing: border-box;
+}
+
+body {
+  width: 100%;
+  height: 100vh;
+  background-color: #0d192b;
+  font-size: 18px;
+  font-family: "Outfit", sans-serif;
+}
+
+.box-container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.box {
+  width: 400px;
+  height: 570px;
+  background-color: #14253d;
+  border-radius: 6%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow: auto;
+}
+
+.main-image {
+  position: relative;
+  margin-top: 15px;
+  width: 80%;
+}
+.main-image .NFTimg {
+  width: 100%;
+  height: 100%;
+  border-radius: 3%;
+}
+.main-image .view {
+  display: none;
+}
+.main-image:hover .view {
+  display: flex;
+  cursor: pointer;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 255, 247, 0.3);
+  border-radius: 3%;
+  position: absolute;
+  top: 0;
+}
+.main-image:hover .view img {
+  position: absolute;
+  top: 50%;
+  left: 44%;
+}
+
+.about-NFT {
+  margin-top: 15px;
+  width: 80%;
+}
+.about-NFT h3 {
+  color: white;
+  cursor: pointer;
+}
+.about-NFT h3:hover {
+  color: #00fff7;
+}
+.about-NFT p {
+  margin-top: 10px;
+  color: #8bacda;
+}
+.about-NFT .price {
+  width: 100%;
+  height: 50px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+.about-NFT .price .ETH, .about-NFT .price .time {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+.about-NFT .price .ETH small, .about-NFT .price .time small {
+  margin-left: 5px;
+  color: #00fff7;
+  font-weight: bold;
+}
+.profile {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  width: 100%;
+}
+.profile .line {
+  margin-top: 10px;
+  width: 80%;
+  height: 2px;
+  background-color: #2f415b;
+}
+.profile .avatar {
+  margin-top: 10px;
+  display: flex;
+  width: 80%;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+}
+.profile .avatar img {
+  border: 1px solid white;
+  border-radius: 50%;
+  width: 35px;
+  height: 35px;
+}
+.profile .avatar p {
+  margin-left: 10px;
+}
+.profile .avatar p span {
+  color: white;
+  cursor: pointer;
+}
+.profile .avatar p span:hover {
+  color: #00fff7;
+}
+
+@media (max-width: 375px) {
+  .box {
+    width: 350px;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */
